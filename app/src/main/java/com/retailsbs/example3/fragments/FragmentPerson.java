@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.retailsbs.example3.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Created by Trabajo on 04-10-2017.
  */
@@ -35,5 +38,21 @@ public class FragmentPerson extends Fragment {
         mTxtName.setText(mName);
 
         return mLayout;
+    }
+
+    public String getDataPerson (){
+
+        String mData;
+        JSONObject mJSONObject = new JSONObject();
+
+        try {
+
+            mData = "{\"data\":{\"rut\":\"" + mRut + "\",\"name\":\"" + mName + "\"}}";
+            mJSONObject = new JSONObject(mData);
+
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return mJSONObject.toString();
     }
 }

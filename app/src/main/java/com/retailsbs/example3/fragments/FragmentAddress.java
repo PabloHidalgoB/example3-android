@@ -3,9 +3,11 @@ package com.retailsbs.example3.fragments;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -15,6 +17,8 @@ import com.retailsbs.example3.adapters.AddressAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by Trabajo on 04-10-2017.
@@ -42,8 +46,42 @@ public class FragmentAddress extends Fragment {
         mListAddress = new ArrayList<>();
 
         mListAddress.add("Trento norte 406");
+        mListAddress.add("Trento norte 406");
+        mListAddress.add("Trento norte 406");
+        mListAddress.add("Trento norte 406");
+        mListAddress.add("Trento norte 406");
+        mListAddress.add("Trento norte 406");
+        mListAddress.add("Trento norte 406");
+        mListAddress.add("Trento norte 406");
+        mListAddress.add("Trento norte 406");
+        mListAddress.add("Trento norte 406");
+        mListAddress.add("Avenida siempre viva 1475");
+        mListAddress.add("Avenida siempre viva 1475");
+        mListAddress.add("Avenida siempre viva 1475");
+        mListAddress.add("Avenida siempre viva 1475");
+        mListAddress.add("Avenida siempre viva 1475");
+        mListAddress.add("Avenida siempre viva 1475");
+        mListAddress.add("Avenida siempre viva 1475");
         mListAddress.add("Avenida siempre viva 1475");
         mListAddress.add("i still know what you did last summer");
+        mListAddress.add("i still know what you did last summer");
+        mListAddress.add("i still know what you did last summer");
+        mListAddress.add("i still know what you did last summer");
+        mListAddress.add("i still know what you did last summer");
+        mListAddress.add("i still know what you did last summer");
+        mListAddress.add("i still know what you did last summer");
+        mListAddress.add("i still know what you did last summer");
+        mListAddress.add("i still know what you did last summer");
+        mListAddress.add("i still know what you did last summer");
+        mListAddress.add("Metro Universidad de chile 90");
+        mListAddress.add("Metro Universidad de chile 90");
+        mListAddress.add("Metro Universidad de chile 90");
+        mListAddress.add("Metro Universidad de chile 90");
+        mListAddress.add("Metro Universidad de chile 90");
+        mListAddress.add("Metro Universidad de chile 90");
+        mListAddress.add("Metro Universidad de chile 90");
+        mListAddress.add("Metro Universidad de chile 90");
+        mListAddress.add("Metro Universidad de chile 90");
         mListAddress.add("Metro Universidad de chile 90");
         mListAddress.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat placerat mi, ut aliquet mi maximus id. Phasellus porta euismod iaculis. Nunc venenatis sit amet mi quis dictum. Mauris dolor leo, consectetur vitae blandit sit amet, varius sit amet ante. Etiam pharetra justo quis neque ultricies finibus. Nulla sit amet justo et ex semper condimentum. Suspendisse lacinia neque enim, sed laoreet nulla volutpat in. Nulla dolor ipsum, porta quis imperdiet vel, consectetur eu magna. Praesent semper tortor dolor, vel ultrices tellus varius vel. Etiam imperdiet malesuada ligula eget tempus.\n" +
                 "\n" +
@@ -56,6 +94,14 @@ public class FragmentAddress extends Fragment {
                 "Nunc odio nisi, malesuada eu euismod in, dignissim id diam. Duis quis lorem et orci dapibus consequat vel nec dui. Fusce feugiat, lectus et efficitur venenatis, tellus turpis fermentum turpis, eget malesuada risus orci eu sapien. Vestibulum vel bibendum enim, vel volutpat nibh. Morbi vestibulum sit amet elit nec dictum. In pulvinar ante odio, id varius massa sollicitudin vitae. Sed convallis porta feugiat. Aliquam id elementum neque, sed gravida massa. Integer nisl elit, rhoncus id vestibulum sit amet, varius a arcu. Fusce eget diam ut enim eleifend imperdiet. Nunc nisi risus, iaculis nec iaculis ac, mattis sit amet lacus. Cras non est molestie, sodales mi eleifend, feugiat leo. Duis vitae dictum ex, in ultrices ante. Suspendisse potenti.");
 
         load();
+
+        mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Log.d(TAG, "position: "+ position);
+
+            }
+        });
 
         return mLayout;
     }

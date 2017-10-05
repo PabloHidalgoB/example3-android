@@ -13,6 +13,7 @@
     <color name="layout_styler_bg_color">#CCCCCC</color>
     <color name="layout_styler_border_color">#333333</color>
 
+    <color name="btn_primary_background_default">#ffffff</color>
     <color name="btn_primary_background_pressed">#dfdfdf</color>
 
 </resources>

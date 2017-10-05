@@ -11,6 +11,8 @@ import com.retailsbs.example3.R;
 import com.retailsbs.example3.fragments.FragmentAddress;
 import com.retailsbs.example3.fragments.FragmentPerson;
 
+import org.json.JSONObject;
+
 public class MainActivity extends RootActivity {
 
     private Fragment mFragmentPerson;
@@ -32,4 +34,10 @@ public class MainActivity extends RootActivity {
         mFragmentTransaction.replace(R.id.fl_listAddress,mFragmentAddress, null).addToBackStack(null).commit();
 
     }
+
+    public JSONObject getDataPerson (){
+        mFragmentPerson.getData
+    }
+
+
 }
