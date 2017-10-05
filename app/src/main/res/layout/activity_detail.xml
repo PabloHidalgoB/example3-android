@@ -55,7 +55,7 @@
                         android:textSize="13dp" />
 
                     <TextView
-                        android:id="@+id/txt_nombre2"
+                        android:id="@+id/txt_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Esperando Datos..."
@@ -73,11 +73,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Edad"
+                        android:text="RUT"
                         android:textSize="13dp" />
 
                     <TextView
-                        android:id="@+id/txt_edad"
+                        android:id="@+id/txt_rut"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Esperando Datos..."
@@ -99,7 +99,7 @@
                         android:textSize="13dp" />
 
                     <TextView
-                        android:id="@+id/txt_direccion"
+                        android:id="@+id/txt_address"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Esperando Datos..."
