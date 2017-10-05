@@ -110,10 +110,8 @@ public class FragmentAddress extends Fragment {
                 try{
                     mJsonObject = ((MainActivity) mRoot).getDataPerson();
 
-                    Intent intent = new Intent(mRoot, DetailActivity.class);
-                    intent.putExtra("person", mJsonObject.toString());
-                    intent.putExtra("address", mAddress);
-                    startActivity(intent);
+                    ((MainActivity) mRoot).changeActivity(mJsonObject.toString(), mAddress);
+
                 }catch (Exception e){
                     e.printStackTrace();
                 }

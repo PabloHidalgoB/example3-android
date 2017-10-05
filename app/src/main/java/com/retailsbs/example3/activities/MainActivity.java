@@ -1,10 +1,12 @@
 package com.retailsbs.example3.activities;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 
 import com.retailsbs.example3.R;
@@ -23,6 +25,7 @@ public class MainActivity extends RootActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("TAG", "==> Main!!");
 
         mFragmentPerson = new FragmentPerson();
         FragmentManager mFragmentManager = getSupportFragmentManager();
@@ -47,6 +50,14 @@ public class MainActivity extends RootActivity {
 
         }
         return mJSONObject;
+    }
+
+    public void changeActivity(String mPerson, String mAddress) {
+        Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
+        intent.putExtra("person", mPerson);
+        intent.putExtra("address", mAddress);
+        startActivity(intent);
+
     }
 
 

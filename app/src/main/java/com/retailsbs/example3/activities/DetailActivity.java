@@ -21,10 +21,11 @@ public class DetailActivity extends RootActivity {
 
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         setTitle("algo");
+        Log.d("TAG", "==> entro!");
 
         if (getIntent().getExtras() != null){
             mPerson = getIntent().getExtras().getString("person");
