@@ -11,12 +11,13 @@ import com.retailsbs.example3.R;
 import com.retailsbs.example3.fragments.FragmentAddress;
 import com.retailsbs.example3.fragments.FragmentPerson;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity extends RootActivity {
 
-    private Fragment mFragmentPerson;
-    private Fragment mFragmentAddress;
+    private FragmentPerson mFragmentPerson;
+    private FragmentAddress mFragmentAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,16 @@ public class MainActivity extends RootActivity {
     }
 
     public JSONObject getDataPerson (){
-        mFragmentPerson.getData
+
+        mFragmentPerson.getDataPerson();
+        JSONObject mJSONObject = new JSONObject();
+        try{
+            mJSONObject =  new JSONObject(mFragmentPerson.getDataPerson());
+        }catch(JSONException e){
+            e.printStackTrace();
+
+        }
+        return mJSONObject;
     }
 
 

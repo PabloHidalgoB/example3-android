@@ -1,5 +1,6 @@
 package com.retailsbs.example3.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.app.Fragment;
@@ -12,11 +13,17 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.retailsbs.example3.R;
+import com.retailsbs.example3.activities.DetailActivity;
+import com.retailsbs.example3.activities.MainActivity;
 import com.retailsbs.example3.activities.RootActivity;
 import com.retailsbs.example3.adapters.AddressAdapter;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.jar.JarException;
 
 import static android.content.ContentValues.TAG;
 
@@ -98,7 +105,19 @@ public class FragmentAddress extends Fragment {
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Log.d(TAG, "position: "+ position);
+                JSONObject mJsonObject = new JSONObject();
+                String mAddress = mListAddress.get(position);
+                try{
+                    mJsonObject = ((MainActivity) mRoot).getDataPerson();
+
+                    Intent intent = new Intent(mRoot, DetailActivity.class);
+                    intent.putExtra("person", mJsonObject.toString());
+                    intent.putExtra("address", mAddress);
+                    startActivity(intent);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
 
             }
         });
