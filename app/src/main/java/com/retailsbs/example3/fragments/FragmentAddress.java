@@ -45,10 +45,13 @@ public class FragmentAddress extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         mRoot = (RootActivity) getActivity();
+        // Obtiene la actividad de RootActivity para ser utilizada como contexto
 
         mLayout = (LinearLayout) inflater.inflate(R.layout.fragment_address, container, false);
+        // Relaciona la clase FragmentAddress con el xml fragment_address dentro de la carpeta layout
 
         mList = (ListView) mLayout.findViewById(R.id.lstv_people);
+        // Relaciona mList con el listview lstv_people contenido dentro de mLayout
 
         mListAddress = new ArrayList<>();
 
@@ -105,18 +108,21 @@ public class FragmentAddress extends Fragment {
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                //abre el contenido del listView mList en la posicion seleccionada
+
                 JSONObject mJsonObject = new JSONObject();
                 String mAddress = mListAddress.get(position);
                 try{
                     mJsonObject = ((MainActivity) mRoot).getDataPerson();
 
-                    ((MainActivity) mRoot).changeActivity(mJsonObject.toString(), mAddress);
+                    Intent intent = new Intent(mRoot, DetailActivity.class);
+                    intent.putExtra("person", mJsonObject.toString());
+                    intent.putExtra("address", mAddress);
+                    startActivity(intent);
 
                 }catch (Exception e){
                     e.printStackTrace();
                 }
-
-
             }
         });
 

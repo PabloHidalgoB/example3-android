@@ -13,5 +13,7 @@ public class RootActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState,  PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
+        // esta clase fue creada como raiz que se extiende desde AppCompatActivity
+        // sera utilizada mas tarde para entregar argumentos
     }
 }

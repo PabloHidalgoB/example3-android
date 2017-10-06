@@ -39,26 +39,17 @@ public class MainActivity extends RootActivity {
 
     }
 
-    public JSONObject getDataPerson (){
+    public JSONObject getDataPerson(){
 
         mFragmentPerson.getDataPerson();
+        //se obtienen loa datos de la persona que estan guardados dentro de mFragmentPerson a travez de un JSONObject.tostring
         JSONObject mJSONObject = new JSONObject();
         try{
             mJSONObject =  new JSONObject(mFragmentPerson.getDataPerson());
         }catch(JSONException e){
             e.printStackTrace();
-
         }
         return mJSONObject;
     }
-
-    public void changeActivity(String mPerson, String mAddress) {
-        Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
-        intent.putExtra("person", mPerson);
-        intent.putExtra("address", mAddress);
-        startActivity(intent);
-
-    }
-
 
 }
