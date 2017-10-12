@@ -31,8 +31,8 @@ public class FragmentPerson extends Fragment {
         mTxtName = (TextView) mLayout.findViewById(R.id.txt_name);
         mTxtRut = (TextView) mLayout.findViewById(R.id.txt_rut);
 
-        mRut = "18.192.374-1";
-        mName = "Pablo Ignacio Hidalgo Bustos";
+        mRut = "11.111.111-1";
+        mName = "Pablo Hidalgo";
 
         mTxtRut.setText(mRut);
         mTxtName.setText(mName);

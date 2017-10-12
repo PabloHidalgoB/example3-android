@@ -47,16 +47,6 @@ public class FragmentAddress extends Fragment {
 
         mListAddress = new ArrayList<>();
 
-        mListAddress.add("Trento norte 406");
-        mListAddress.add("Trento norte 406");
-        mListAddress.add("Trento norte 406");
-        mListAddress.add("Trento norte 406");
-        mListAddress.add("Trento norte 406");
-        mListAddress.add("Trento norte 406");
-        mListAddress.add("Trento norte 406");
-        mListAddress.add("Trento norte 406");
-        mListAddress.add("Trento norte 406");
-        mListAddress.add("Trento norte 406");
         mListAddress.add("Avenida siempre viva 1475");
         mListAddress.add("Avenida siempre viva 1475");
         mListAddress.add("Avenida siempre viva 1475");
